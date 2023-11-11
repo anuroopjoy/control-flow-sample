@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ControlBase } from './controls/control-base';
 import { DataService } from './data.service';
@@ -10,7 +9,7 @@ import { MetaService } from './meta.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [NgIf, DynamicFormComponent]
+  imports: [DynamicFormComponent],
 })
 export class AppComponent implements OnInit {
   title = 'dynamic-form-app';

@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { DropDownControl } from './dropdown-control';
@@ -8,7 +7,7 @@ import { DropDownControl } from './dropdown-control';
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
   standalone: true,
-  imports: [NgFor, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
 })
 export default class DropdownComponent implements OnInit {
   @Input() meta!: DropDownControl;

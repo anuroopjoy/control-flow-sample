@@ -1,4 +1,3 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnChanges } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ControlComponent } from '../control/control.component';
@@ -10,7 +9,7 @@ import { MetaService } from '../meta.service';
   templateUrl: './dynamic-form.component.html',
   styleUrls: ['./dynamic-form.component.scss'],
   standalone: true,
-  imports: [NgIf, NgFor, ReactiveFormsModule, ControlComponent],
+  imports: [ReactiveFormsModule, ControlComponent],
 })
 export class DynamicFormComponent implements OnChanges {
   @Input() meta: ControlBase[] = [];

@@ -1,6 +1,10 @@
-<ng-container [ngSwitch]="control.controlType">
-  <app-dropdown [form]="form" [meta]="control" *ngSwitchCase="'dropdown'"></app-dropdown>
-  <app-label [meta]="control" *ngSwitchCase="'label'"></app-label>
-  <app-text-input [form]="form" [meta]="control" *ngSwitchCase="'textinput'"></app-text-input>
-  <app-checkbox [form]="form" [meta]="control" *ngSwitchCase="'checkbox'"></app-checkbox>
-</ng-container>
+@switch (control.controlType) { @case ('dropdown') {
+<app-dropdown [form]="form" [meta]="control"></app-dropdown>
+} @case ('label') {
+<app-label [meta]="control"></app-label>
+} @case ('textinput') {
+<app-text-input [form]="form" [meta]="control"></app-text-input>
+} @case ('dropdown') {
+<app-checkbox [form]="form" [meta]="control"></app-checkbox>} @default {
+<!-- Any default control -->
+} }
