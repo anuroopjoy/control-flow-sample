@@ -1,5 +1,7 @@
 @if(meta && data) {
 <app-dynamic-form [meta]="meta" [data]="data"></app-dynamic-form>
-} @else { Loading form data }
+} @else {
+<p>Loading form data</p>
+}
 
 <button class="btn btn-primary mt-5" (click)="refresh()">Refresh</button>
